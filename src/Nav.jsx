@@ -3,8 +3,8 @@ import "./styles/Nav.css";
 
 function Nav() {
   return (
-    <div className="navbar" style={{ color: "gold" }}>
-      <p>Nav here!</p>
+    <div className="navbar">
+      <p>My Favorite Spicy Restaurants</p>
     </div>
   );
 }
