@@ -29,33 +29,32 @@ function List() {
   console.log(allRestaurantsInfo);
 
   //logic for restaurants
-  // const [restaurantInfo, setRestaurant] = useState([]);
+  const [restaurantInfo, setRestaurant] = useState([]);
 
-  // async function restaurantFunc(e) {
-  //   console.log("func clicked");
-  //   console.log(e.target.value);
-  //   const value = e.target.value;
+  async function restaurantFunc(e) {
+    console.log("func clicked");
+    console.log(e.target.value);
+    const value = e.target.value;
 
-  //   const req = axios.get(
-  //     "https://cc14solomvpproject-app.herokuapp.com/api/restaurants"
-  //   );
-  //   const res = await req;
-  //   const data = res.data;
-  //   // console.log(data);
-  //   if (value === "shing") {
-  //     // console.log(data[0]);
-  //     let temp = [];
-  //     let info = temp.concat([data[0].name, data[0].feature, data[0].tell]);
-  //     setRestaurant(info);
-  //   }
-  //   if (value === "momo") {
-  //     console.log(data[1]);
-  //     let temp = [];
-  //     let info = temp.concat([data[1].name, data[1].feature, data[1].tell]);
-  //     setRestaurant(info);
-  //   }
-  // }
-  // console.log(restaurantInfo);
+    const req = axios.get(
+      "https://cc14solomvpproject-app.herokuapp.com/api/restaurants"
+    );
+    const res = await req;
+    const data = res.data;
+    // console.log(data);
+    if (value === "shing") {
+      // console.log(data[0]);
+      let temp = [];
+      let info = temp.concat([data[0].name, data[0].feature, data[0].tell]);
+      setRestaurant(info);
+    } else if (value === "momo") {
+      console.log(data[1]);
+      let temp = [];
+      let info = temp.concat([data[1].name, data[1].feature, data[1].tell]);
+      setRestaurant(info);
+    }
+  }
+  console.log(restaurantInfo);
 
   return (
     <div className="list">
@@ -64,14 +63,14 @@ function List() {
         <li>All restaurants Feature?</li>
         <button onClick={getAllData}>Info</button>
         <li>シンガポール海南鶏飯</li>
-        {/* <button onClick={restaurantFunc} value="shing">
+        <button onClick={restaurantFunc} value="shing">
           Info
-        </button> */}
+        </button>
         <li>MOMO</li>
-        {/* <button onClick={restaurantFunc} value="momo">
+        <button onClick={restaurantFunc} value="momo">
           Info
-        </button> */}
-        <li>サラムナマステ</li>
+        </button>
+        {/* <li>サラムナマステ</li>
         <button>Info</button>
         <li>タマンのカレー屋さん</li>
         <button>Info</button>
@@ -84,12 +83,11 @@ function List() {
         <li>Nong Inlay</li>
         <button>Info</button>
         <li>Atila's hundmade curry</li>
-        <button>Info</button>
+        <button>Info</button> */}
       </ul>
-      {/* <Info allInfo={allRestaurants} singInfo={shingRestaurant} /> */}
       <Info
         allRestaurants={allRestaurantsInfo}
-        // restaurant="restaurantInfo"
+        restaurant={restaurantInfo}
         // name="test"
       />
     </div>

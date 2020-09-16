@@ -3,7 +3,7 @@ import axios from "axios";
 import "./styles/Info.css";
 
 // function Info({ allRestaurants, restaurant, name }) {
-function Info({ allRestaurants }) {
+function Info({ allRestaurants, restaurant }) {
   // //state for all restaurant data
   // const [allRestaurants, setState] = useState("");
 
@@ -33,7 +33,7 @@ function Info({ allRestaurants }) {
       <p>{allRestaurants}</p> */}
       {/* <p>{name}</p> */}
       <h4>{allRestaurants}</h4>
-      {/* <h4>{restaurant}</h4> */}
+      <h4>{restaurant}</h4>
     </>
   );
 }
