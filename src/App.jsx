@@ -6,7 +6,7 @@ import Nav from "./Nav";
 function App() {
   return (
     <div className="App" style={{ flex: 1 }}>
-      <p>Keep It Simple</p>
+      <p>No spice No life</p>
       <Nav style={{ flex: 1 }} />
       <List style={{ flex: 3 }} />
     </div>
