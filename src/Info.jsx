@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./styles/Info.css";
 
-function Info({ allRestaurants, restaurant, name }) {
+// function Info({ allRestaurants, restaurant, name }) {
+function Info({ allRestaurants }) {
   // //state for all restaurant data
   // const [allRestaurants, setState] = useState("");
 
@@ -30,9 +31,9 @@ function Info({ allRestaurants, restaurant, name }) {
         click
       </button>
       <p>{allRestaurants}</p> */}
-      <p>{name}</p>
+      {/* <p>{name}</p> */}
       <h4>{allRestaurants}</h4>
-      <h4>{restaurant}</h4>
+      {/* <h4>{restaurant}</h4> */}
     </>
   );
 }
